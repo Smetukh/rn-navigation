@@ -6,18 +6,18 @@ const HomeScreen = ({ navigation, route }) => {
   // navigation.navigate('BrowseScreen')
   console.log('HomeScreen navigation = ', navigation);
   console.log('HomeScreen route = ', route);
-  // const { userName } = route.params;
+  const { userName } = route.params;
   navigation.setOptions({
     title: 'Home1',
     headerRight: () => (
       <View>
-        <Text>RIGHT</Text>
+        <Text>RIGHT{userName}</Text>
       </View>
     ),
   });
   return (
     <View>
-      <Text>HomeScreen+{}</Text>
+      <Text>HomeScreen+{userName}</Text>
       <Button
         title="Navigate to Browse"
         onPress={() =>

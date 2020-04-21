@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { StackActions } from '@react-navigation/native';
 
 export const isMountedRef = React.createRef();
 
@@ -12,4 +13,9 @@ export function navigate(name, params) {
     // You can decide what to do if the app hasn't mounted
     // You can ignore this, or add these actions to a queue you can call later
   }
+}
+
+// navigation PUSH actions
+export function push(...args) {
+  navigationRef.current?.dispatch(StackActions.push(...args));
 }

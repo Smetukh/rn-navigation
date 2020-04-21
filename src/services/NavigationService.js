@@ -3,7 +3,7 @@ import * as RootNavigation from '../navigation/RootNavigation';
 
 // ...
 export default function navigateToHome() {
-  RootNavigation.navigate('Home', { userName: 'Lucy' });
+  RootNavigation.navigate('Profile', { userName: 'Lucy' });
 }
 
 // import { CommonActions } from '@react-navigation/native';
