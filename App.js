@@ -1,10 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Navigator from './src/navigation/';
+import { globalStyles } from './src/styles';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <View style={[globalStyles.fillAll]}>
+      {/* <Text>Open up!!! App.js to start working on your app!</Text> */}
+      <Navigator />
     </View>
   );
 }
