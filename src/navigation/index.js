@@ -18,10 +18,10 @@ function StackNavigator({ isLoggedIn = true }) {
 
     return () => (isMountedRef.current = false);
   }, []);
-console.log('screens.MainApp = ', screens.MainApp)
+  console.log('screens.MainApp = ', screens.MainApp);
   return (
     <NavigationContainer ref={navigationRef}>
-      <Stack.Navigator>
+      <Stack.Navigator mode="modal" headerMode="none">
         {isLoggedIn ? (
           <Stack.Screen
             name={screens.MainApp}

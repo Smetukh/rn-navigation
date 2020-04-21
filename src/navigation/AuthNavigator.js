@@ -8,10 +8,10 @@ const Stack = createStackNavigator();
 
 function AuthNavigator() {
   return (
-    <Stack.Navigator initialRouteName="Home">
+    <Stack.Navigator>
       <Stack.Screen name={screens.Login} component={LoginScreen} />
       <Stack.Screen
-        options={{ title: 'Browse1' }}
+        // options={{ title: 'Browse1' }}
         name={screens.Register}
         component={RegisterScreen}
       />
