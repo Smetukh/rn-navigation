@@ -8,7 +8,7 @@ const Stack = createStackNavigator();
 
 function AuthNavigator() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator initialRouteName={screens.Login}>
       <Stack.Screen name={screens.Login} component={LoginScreen} />
       <Stack.Screen
         // options={{ title: 'Browse1' }}

@@ -13,7 +13,7 @@ const Tab = createBottomTabNavigator();
 
 function AppTabNavigator() {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator initialRouteName={screens.BrowseTab}>
       <Tab.Screen
         name={screens.BrowseTab}
         component={BrowseNavigator}
