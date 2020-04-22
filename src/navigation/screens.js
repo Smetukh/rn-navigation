@@ -13,6 +13,12 @@ export default mirror([
   // Main App
   'MainApp',
 
+  'SavedTab',
+  'Saved',
+
+  'InboxTab',
+  'Inbox',
+
   'ProfileTab',
   'Profile',
 
