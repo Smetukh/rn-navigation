@@ -6,7 +6,7 @@ import s from './styles';
 const CreatePostScreen = () => {
   return (
     <View style={s.container}>
-      <Text>Create Post SCREEN</Text>
+      <Text>Create Post MODAL SCREEN </Text>
     </View>
   );
 };

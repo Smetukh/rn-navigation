@@ -2,8 +2,6 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { navigationRef, isMountedRef } from './RootNavigation';
-import HomeScreen from '../screens/HomeScreen';
-import BrowseScreen from '../screens/Browse/BrowseScreen';
 import AuthNavigator from './AuthNavigator';
 import CreatePostNavigator from './CreatePostNavigator';
 import AppTabNavigator from './AppTabNavigator';

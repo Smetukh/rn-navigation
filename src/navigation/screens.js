@@ -18,12 +18,14 @@ export default mirror([
 
   'InboxTab',
   'Inbox',
+  'Letters',
 
   'ProfileTab',
   'Profile',
 
   'BrowseTab',
   'Browse',
+  'Post',
 
   'CreatePostModal',
   'CreatePost',

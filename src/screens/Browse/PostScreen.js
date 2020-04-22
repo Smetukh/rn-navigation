@@ -5,7 +5,7 @@ import s from './styles';
 import screens from '../../navigation/screens';
 // import { Icon } from '../../styles/Icon';
 
-const BrowseScreen = ({ route, navigation }) => {
+const PostScreen = ({ route, navigation }) => {
   // console.log('navigation Browse = ', navigation);
 
   // const { name } = route.params;
@@ -14,12 +14,8 @@ const BrowseScreen = ({ route, navigation }) => {
   // });
   return (
     <View style={s.container}>
-      <Text>BROWSE SCREEN </Text>
+      <Text>PostScreen SCREEN </Text>
       {/* <Icon name="GreenCircle" /> */}
-      <Button
-        title="!Open Post"
-        onPress={() => navigation.navigate(screens.Post)}
-      />
       <Button title="Open HOME" onPress={() => navigateToAuth()} />
       <Button
         title="Create POST "
@@ -29,10 +25,10 @@ const BrowseScreen = ({ route, navigation }) => {
   );
 };
 
-BrowseScreen.navigationOptions = () => ({
+PostScreen.navigationOptions = () => ({
   // title: 'Browse',
 });
 
-BrowseScreen.propTypes = {};
+PostScreen.propTypes = {};
 
-export default BrowseScreen;
+export default PostScreen;

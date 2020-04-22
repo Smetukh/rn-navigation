@@ -18,12 +18,12 @@ const HomeScreen = ({ navigation, route }) => {
   return (
     <View>
       <Text>HomeScreen+{userName}</Text>
-      <Button
+      {/* <Button
         title="Navigate to Browse"
         onPress={() =>
           navigation.navigate('BrowseScreen', { name: 'SOME NAME' })
         }
-      />
+      /> */}
     </View>
   );
 };

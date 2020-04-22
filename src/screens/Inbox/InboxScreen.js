@@ -9,6 +9,10 @@ const InboxScreen = ({ navigation }) => {
     <View style={s.container}>
       <Text>InboxScreen SCREEN</Text>
       <Button
+        title="Go to Letter List"
+        onPress={() => navigation.navigate(screens.Letters)}
+      />
+      <Button
         title="Go to Auth"
         onPress={() => navigation.navigate(screens.Auth)}
       />

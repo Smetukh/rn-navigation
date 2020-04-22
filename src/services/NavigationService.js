@@ -2,8 +2,8 @@
 import * as RootNavigation from '../navigation/RootNavigation';
 
 // ...
-export default function navigateToHome() {
-  console.log('navigateToHome = ')
+export default function navigateToAuth() {
+  console.log('navigateToAuth!!!')
   RootNavigation.navigate('Auth', { userName: 'Lucy' });
 }
 

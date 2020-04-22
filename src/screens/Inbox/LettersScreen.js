@@ -4,14 +4,10 @@ import { View, Text, Button } from 'react-native';
 import s from './styles';
 import screens from '../../navigation/screens';
 
-const SavedScreen = ({ navigation }) => {
+const InboxScreen = ({ navigation }) => {
   return (
     <View style={s.container}>
-      <Text>Saved SCREEN</Text>
-      <Button
-        title="!Open Post"
-        onPress={() => navigation.navigate(screens.Post)}
-      />
+      <Text>InboxScreen SCREEN</Text>
       <Button
         title="Go to Auth"
         onPress={() => navigation.navigate(screens.Auth)}
@@ -20,10 +16,10 @@ const SavedScreen = ({ navigation }) => {
   );
 };
 
-SavedScreen.navigationOptions = () => ({
+InboxScreen.navigationOptions = () => ({
   title: 'Saved',
 });
 
-SavedScreen.propTypes = {};
+InboxScreen.propTypes = {};
 
-export default SavedScreen;
+export default InboxScreen;
