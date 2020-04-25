@@ -18,7 +18,8 @@ const BrowseScreen = ({ route, navigation }) => {
       {/* <Icon name="GreenCircle" /> */}
       <Button
         title="!Open Post"
-        onPress={() => navigation.navigate(screens.Post)}
+        onPress={() => console.log('####################')}
+        // onPress={() => navigation.navigate(screens.Post)}
       />
       <Button title="Open HOME" onPress={() => navigateToAuth()} />
       <Button

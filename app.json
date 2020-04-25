@@ -16,13 +16,47 @@
       "backgroundColor": "#ffffff"
     },
     "updates": {
+      "enabled": false,
       "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.apiko.marketplace",
+      "icon": "./assets/icon.png",
+      "splash": {
+        "image": "./assets/splash.png",
+        "backgroundColor": "#ffffff",
+        "resizeMode": "contain"
+      },
+      "infoPlist": {
+        "NSCameraUsageDescription": "Allow acces to your camera"
+      },
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "versionCode": 28,
+      "icon": "./assets/icon.png",
+      "package": "com.apiko.marketplace",
+      "splash": {
+        "ldpi": "./assets/splash.png",
+        "mdpi": "./assets/splash.png",
+        "hdpi": "./assets/splash.png",
+        "xhdpi": "./assets/splash.png",
+        "xxhdpi": "./assets/splash.png",
+        "xxxhdpi": "./assets/splash.png",
+        "backgroundColor": "#ffffff",
+        "resizeMode": "contain"
+      },
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
     }
-  }
+  },
+  "slug": "mobile",
+  "name": "mobile"
 }
