@@ -1,27 +1,70 @@
-import { types, getRoot } from 'mobx-state-tree';
+import { types, flow } from 'mobx-state-tree';
 import Api from 'src/api';
-import { asyncModel } from '../utils';
-// import { LoginStore } from './LoginStore';
 
-export const AuthStore = types.model('AuthStore', {
-  // login: types.optional(LoginStore, {}),
-  login: asyncModel(loginFlow),
-  logout: asyncModel(logoutFlow),
-});
+function asyncModel(thunk) {
+  const model = types
+    .model('AsyncModel', {
+      isLoading: false,
+      isError: false,
+    })
 
-function loginFlow({ password, email }) {
-  return async (flowStore) => {
-    const res = await Api.Auth.login({ password, email });
+    .actions((store) => ({
+      // run(...args) {
+      //   console.log('LoginStore RUN= ');
+      //   const promise = thunk(...args)(store);
+      //   return promise;
+      // },
+      // logout() {
+      //   console.log('LoginStore logout= ');
+        
+        
+      //   const promise = thunk()(store);
+      //   return promise;
+      // }
+    }));
 
-    Api.Auth.setToken(res.data.token);
-
-    console.log('res.data loginFlow = ', res.data.user);
-    getRoot(flowStore).viewer.setViewer(res.data.user);
-  };
+  // return model.create({})
+  return types.optional(model, {});
 }
-function logoutFlow() {
-  return async (flowStore) => {
-    await Api.Auth.setToken(null);
-    getRoot(flowStore).viewer.setViewer();
-  };
-}
+
+export const LoginStore = types
+  .model('LoginStore', {
+    isLoading: false,
+    isError: false,
+    // loginFlow: asyncModel(loginFlow),
+    // logoutFlow: asyncModel(logoutFlow),
+  })
+  .actions((store) => ({
+    // run: flow(function* run({ password, email }) {
+    //   try {
+    //     store.isLoading = true;
+    //     store.isError = false;
+    //     const res = yield Api.Auth.login({ password, email });
+    //     console.log('res dataLoginStore = ', res.data);
+    //     store.isLoading = false;
+    //   } catch (err) {
+    //     store.isError = true;
+    //     console.log(err);
+    //   }
+    // }),
+    // logout: flow(function* logout() {
+    //   console.log('LOGINSTORE LOGOUT = ');
+
+    //   yield Api.Auth.logout();
+    // }),
+  }));
+
+// function loginFlow({ password, email }) {
+//   return async (flowStore) => {
+//     try {
+//       flowStore.isLoading = true;
+//       flowStore.isError = false;
+//       const res = await Api.Auth.login({ password, email });
+//       console.log('res dataLoginStore loginFlow = ', res.data);
+//       // self.isLoading = false;???
+//     } catch (err) {
+//       console.log('err = ', err);
+//       flowStore.isError = true;
+//     }
+//   };
+// }
