@@ -6,7 +6,6 @@ import screens from '../../navigation/screens';
 // import { Icon } from '../../styles/Icon';
 
 const BrowseScreen = ({ route, navigation }) => {
-  // console.log('navigation Browse = ', navigation);
 
   // const { name } = route.params;
   // navigation.setOptions({

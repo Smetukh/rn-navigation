@@ -6,8 +6,6 @@ export const isMountedRef = React.createRef();
 export const navigationRef = React.createRef();
 
 export function navigate(name, params) {
-  console.log('name = ', name)
-  console.log('params = ', params)
   if (isMountedRef.current && navigationRef.current) {
     // Perform navigation if the app has mounted
     navigationRef.current.navigate(name, params);
