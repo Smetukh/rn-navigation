@@ -14,7 +14,6 @@ const BrowseScreen = ({ route, navigation }) => {
   return (
     <View style={s.container}>
       <Text>BROWSE SCREEN </Text>
-      {/* <Icon name="GreenCircle" /> */}
       <Button
         title="!Open Post"
         onPress={() => console.log('####################')}

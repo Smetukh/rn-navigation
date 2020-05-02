@@ -10,7 +10,6 @@ import BrowseNavigator from './BrowseNavigator';
 import ProfileNavigator from './ProfileNavigator';
 import SavedNavigator from './SavedNavigator';
 import InboxNavigator from './InboxNavigator';
-// import RegisterScreen from '../screens/Auth/RegisterScreen/RegisterScreen';
 
 const Tab = createBottomTabNavigator();
 

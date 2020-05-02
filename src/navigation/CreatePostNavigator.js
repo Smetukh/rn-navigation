@@ -13,11 +13,6 @@ function ProfileNavigator() {
         name={screens.CreatePost}
         component={CreatePostScreen}
       />
-      {/* <Stack.Screen
-        options={{ title: 'Browse1' }}
-        name={[screens.Register]}
-        component={RegisterScreen}
-      /> */}
     </Stack.Navigator>
   );
 }

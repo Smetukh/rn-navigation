@@ -12,11 +12,6 @@ function BrowseNavigator() {
     <Stack.Navigator initialRouteName="Home">
       <Stack.Screen name={screens.Browse} component={BrowseScreen} />
       <Stack.Screen name={screens.Post} component={PostScreen} />
-      {/* <Stack.Screen
-        options={{ title: 'Browse1' }}
-        name={[screens.Register]}
-        component={RegisterScreen}
-      /> */}
     </Stack.Navigator>
   );
 }
